@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кулінарна книга — AJAX (Практична №5)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <div class="header-content">
+                <span class="header-icon">📖</span>
+                <div>
+                    <span class="header-badge">Практична №5 · AJAX & REST API</span>
+                    <h1>Кулінарна книга (AJAX + JSON)</h1>
+                    <p class="subtitle">Живий пошук, асинхронне додавання та видалення рецептів без перезавантаження сторінки.</p>
+                </div>
+            </div>
+            <div class="header-nav" style="margin-top: 15px;">
+                <a href="setup.php" class="btn-secondary" style="font-size: 0.9rem; text-decoration: none; padding: 6px 12px; background: #e2e8f0; border-radius: 4px; color: #333;">⚙️ Ініціалізація БД (Setup)</a>
+            </div>
+        </header>
+
+        <section class="search-section" style="margin-bottom: 20px;">
+            <input type="text" id="search" class="form-control" placeholder="🔍 Живий пошук за назвою або інгредієнтом...">
+        </section>
+
+        <section class="add-section" style="margin-bottom: 30px;">
+            <form id="add-form" class="form-card">
+                <h2>Додати новий рецепт (AJAX)</h2>
+                <div style="display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 10px; margin-top: 15px;" class="form-grid-responsive">
+                    <input type="text" id="title" class="form-control" placeholder="Назва страви" required>
+                    <input type="text" id="ingredients" class="form-control" placeholder="Інгредієнти через кому" required>
+                    <input type="number" id="cook_time_min" class="form-control" placeholder="Час (хв)" min="1" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-top: 15px; width: 100%;">➕ Додати рецепт без перезавантаження</button>
+            </form>
+        </section>
+
+        <section class="results-section">
+            <h2 class="section-title">📋 Каталог рецептів</h2>
+            <div id="results" class="results-container">
+                <p>Завантаження рецептів...</p>
+            </div>
+        </section>
+
+        <footer class="footer" style="margin-top: 40px; text-align: center; color: #666; font-size: 0.9rem;">
+            Практична робота №5 • Варіант 6 (Кулінарна книга) • PHP <?= PHP_VERSION ?>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
