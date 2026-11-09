@@ -54,6 +54,6 @@ PHP_LABS/
 ├── lab3/   # ООП у PHP
 ├── lab4/   # PDO + MySQL CRUD
 ├── lab5/   # AJAX + REST/JSON API
-├── lab6/   # REST API + авторизація
+├── lab6/   # REST API
 └── README.md
 ```
